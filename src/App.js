@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import Layout from './components/Layout';
-import PersonWidget from './components/profile/PersonWidget';
+import Menu from './components/menu';
 
 function App() {
   return (
     <div className="App">
       <Layout>
-        <PersonWidget />
+        <Menu/>
       </Layout>
     </div>
   );
