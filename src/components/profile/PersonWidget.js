@@ -23,6 +23,10 @@ const ProfileName = styled.div`
 const WidgetWrapper = styled.div`
   display: flex;
   align-items: center;
+  background-color: rgba(255, 255, 255, .75);
+  width: max-content;
+  padding: 7px 5px;
+  border-radius: 20px
 `
 
 const PersonWidget = (props) =>(
