@@ -8,13 +8,14 @@ const MenuWrapper = styled.nav`
   color: white;
   width: 160px;
   text-align: left;
-  padding: 10px 5px;
-  border-radius: 20px 15px 15px 20px;
+  padding-top: 35px;
+  border-radius: 60px 40px 40px 60px;
   height: 100%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
   
   .menu-icon {
     padding-top: 50px;
@@ -55,7 +56,6 @@ const Menu = (props) => (
     {fontawesome_icons.map(icon => (
       <div className="menu-icon">
         <FontAwesomeIcon
-          // viewBox="0 0 200 200"
           icon={icon} />
       </div>
 
