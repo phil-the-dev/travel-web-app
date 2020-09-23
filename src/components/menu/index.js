@@ -6,10 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const MenuWrapper = styled.nav`
   background-color: #3E20D9;
   color: white;
-  width: 60px;
+  width: 160px;
   text-align: left;
   padding: 10px 5px;
   border-radius: 20px 15px 15px 20px;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -17,29 +18,48 @@ const MenuWrapper = styled.nav`
   
   .menu-icon {
     padding-top: 50px;
-    height: 15px;
+    display: flex;
+    justfy-content: center;
+    width: 50px;
+    height: 50px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 `
 const Brand = styled.div`
   ::before {
+    font-size: 24px;
     content: "Good";
     display: block;
   }
   ::after {
+    font-size: 24px;
     content: "Travel.";
     font-weight: bold;
    }
 `
-
+const fontawesome_icons = [
+  faBuilding,
+  faPlaneDeparture,
+  faTrain,
+  faTaxi,
+  faCampground
+]
 
 const Menu = (props) => (
   <MenuWrapper>
     <Brand/>
-    <FontAwesomeIcon className="menu-icon" icon={faBuilding} />
-    <FontAwesomeIcon className="menu-icon" icon={faPlaneDeparture} />
-    <FontAwesomeIcon className="menu-icon" icon={faTrain} />
-    <FontAwesomeIcon className="menu-icon" icon={faTaxi} />
-    <FontAwesomeIcon className="menu-icon" icon={faCampground} />
+    {fontawesome_icons.map(icon => (
+      <div className="menu-icon">
+        <FontAwesomeIcon
+          // viewBox="0 0 200 200"
+          icon={icon} />
+      </div>
+
+    ))}
   </MenuWrapper>
 );
 

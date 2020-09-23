@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Layout = (props) => (
-  <div>
+  <div style={{height: "100%"}}>
     {props.children}
   </div>
 );
