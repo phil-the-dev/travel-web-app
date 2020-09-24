@@ -1,9 +1,15 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const LayoutStyle = styled.div`
+  display: flex;
+  height: 100%;
+`
 
 const Layout = (props) => (
-  <div style={{height: "100%"}}>
+  <LayoutStyle>
     {props.children}
-  </div>
+  </LayoutStyle>
 );
 
 export default Layout;
