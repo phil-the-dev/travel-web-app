@@ -9,10 +9,8 @@ const Wrapper = styled.form`
   border-radius: 30px;
   background-color: white;
   margin-top: 20px;
+  justify-content: space-between;
 
-  div {
-    flex-grow: 1;
-  }
   h2 {
     font-size: 16px;
     text-transform: uppercase;
@@ -20,8 +18,14 @@ const Wrapper = styled.form`
     margin: 0;
   }
   .main {
-    padding: 20px;
+    padding: 20px 0;
     width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      margin: 0 20px;
+    }
   }
 `
 
@@ -51,11 +55,18 @@ const FormElement = styled.fieldset`
 
   input {
     border: none;
-    margin: 0 15px;
-    flex-grow: 1;
-    padding: 0;
-    height: 30px;
+    padding: 0 15px;
     font-size: 14px;
+    min-width: 0px;
+    width: 100%;
+  }
+
+  input.user_selection {
+    flex-grow: 1;
+    height: 30px;
+  }
+
+  input.test {
   }
 `
 
@@ -66,6 +77,7 @@ const SubmitButton = styled.button`
   border-radius: 30px;
   width: 20%;
   max-width: 80px;
+  opacity: .5;
   
   svg {
     height: 20px;
@@ -82,28 +94,25 @@ const FindYourStay = () => (
         <IconWrapper>
           <FontAwesomeIcon icon={faMapMarkerAlt} />
         </IconWrapper>
-        <input type="text" placeholder="Location" />
+        <input class="user_selection" type="text" placeholder="Location" />
       </FormElement>
       {/* Check in/out */}
       <FormElement>
-        <IconWrapper>
+        <IconWrapper style={{flexGrow: '1'}}>
           <FontAwesomeIcon icon={faCalendarAlt} />
         </IconWrapper>
-        <div style={{
-          display: 'flex'
-        }}>
-          <input type="text" placeholder="Check-in"  style={{
-            borderRight: '1px solid #F0F0F0'
-          }} />
-          <input type="text" placeholder="Check-out" />
-        </div>
+        <input class="test" type="text" placeholder="Check-in"  style={{
+          borderRight: '1px solid #F0F0F0'
+        }} />
+        <input class="test" type="text" placeholder="Check-out" style={{
+        }}/> 
       </FormElement>
       {/* Guest Amount */}
       <FormElement style={{border: 'none', paddingBottom: '0'}}>
         <IconWrapper>
           <FontAwesomeIcon icon={faUserFriends} />
         </IconWrapper>
-        <input type="text" placeholder="1 Adult, 0 Children, 1 Room" />
+        <input type="text" class="user_selection" placeholder="1 Adult, 0 Children, 1 Room" />
       </FormElement>
     </div>
     <SubmitButton form="stay_search">
