@@ -70,7 +70,6 @@ const SubmitButton = styled.button`
   border-radius: 30px;
   width: 20%;
   max-width: 80px;
-  opacity: .5;
   
   svg {
     height: 20px;
