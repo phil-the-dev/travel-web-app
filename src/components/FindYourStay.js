@@ -21,6 +21,7 @@ const Wrapper = styled.form`
   }
   .main {
     padding: 20px;
+    width: 80%;
   }
 `
 
@@ -63,7 +64,8 @@ const SubmitButton = styled.button`
   color: white;
   border: none;
   border-radius: 30px;
-  width: 80px;
+  width: 20%;
+  max-width: 80px;
   
   svg {
     height: 20px;
