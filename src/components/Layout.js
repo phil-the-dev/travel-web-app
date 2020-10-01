@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const LayoutStyle = styled.div`
   display: flex;
   height: 100%;
+  margin: 10px;
 `
 
 const Layout = (props) => (

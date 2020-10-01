@@ -15,7 +15,6 @@ const MenuWrapper = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
   
   .menu-icon {
     padding-top: 50px;
