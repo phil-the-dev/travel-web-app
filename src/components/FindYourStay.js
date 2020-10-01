@@ -59,14 +59,7 @@ const FormElement = styled.fieldset`
     font-size: 14px;
     min-width: 0px;
     width: 100%;
-  }
-
-  input.user_selection {
-    flex-grow: 1;
     height: 30px;
-  }
-
-  input.test {
   }
 `
 
@@ -94,17 +87,17 @@ const FindYourStay = () => (
         <IconWrapper>
           <FontAwesomeIcon icon={faMapMarkerAlt} />
         </IconWrapper>
-        <input class="user_selection" type="text" placeholder="Location" />
+        <input type="text" placeholder="Location" />
       </FormElement>
       {/* Check in/out */}
       <FormElement>
         <IconWrapper style={{flexGrow: '1'}}>
           <FontAwesomeIcon icon={faCalendarAlt} />
         </IconWrapper>
-        <input class="test" type="text" placeholder="Check-in"  style={{
+        <input type="text" placeholder="Check-in"  style={{
           borderRight: '1px solid #F0F0F0'
         }} />
-        <input class="test" type="text" placeholder="Check-out" style={{
+        <input type="text" placeholder="Check-out" style={{
         }}/> 
       </FormElement>
       {/* Guest Amount */}
@@ -112,7 +105,7 @@ const FindYourStay = () => (
         <IconWrapper>
           <FontAwesomeIcon icon={faUserFriends} />
         </IconWrapper>
-        <input type="text" class="user_selection" placeholder="1 Adult, 0 Children, 1 Room" />
+        <input type="text" placeholder="1 Adult, 0 Children, 1 Room" />
       </FormElement>
     </div>
     <SubmitButton form="stay_search">
