@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import PopularStay from "./PopularStay";
 import kantiang from "../assets/stays/kantiangviewresort.jpg";
 

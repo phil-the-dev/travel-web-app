@@ -71,7 +71,7 @@ const PopularStay = ({
 }) => (
   <StayWrapper href="#" onClick={(e) => e.preventDefault()}>
     <StayImage>
-      <img src={image} />
+      <img src={image} alt={title} />
     </StayImage>
     <StayText>
       <span className="type">{type}</span>
