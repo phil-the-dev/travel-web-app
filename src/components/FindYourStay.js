@@ -1,6 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import { faSearch, faMapMarkerAlt, faCalendarAlt, faUserFriends } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import styled from "styled-components";
+import {
+  faSearch,
+  faMapMarkerAlt,
+  faCalendarAlt,
+  faUserFriends,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Wrapper = styled.form`
@@ -27,11 +32,11 @@ const Wrapper = styled.form`
       margin: 0 20px;
     }
   }
-`
+`;
 
 const IconWrapper = styled.div`
-  background-color: #EBE8FB;
-  color: #654DE1;
+  background-color: #ebe8fb;
+  color: #654de1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,17 +44,17 @@ const IconWrapper = styled.div`
   min-width: 50px;
   max-width: 50px;
   height: 50px;
-  
+
   svg {
     width: 40% !important;
     height: 40%;
   }
-`
+`;
 
 const FormElement = styled.fieldset`
   border: none;
   display: flex;
-  border-bottom: 1px solid #F0F0F0;
+  border-bottom: 1px solid #f0f0f0;
   padding: 20px 0;
   align-items: center;
 
@@ -61,21 +66,21 @@ const FormElement = styled.fieldset`
     width: 100%;
     height: 30px;
   }
-`
+`;
 
 const SubmitButton = styled.button`
-  background-color: #654DE1;
+  background-color: #654de1;
   color: white;
   border: none;
   border-radius: 30px;
   width: 20%;
   max-width: 80px;
-  
+
   svg {
     height: 20px;
     width: 20px !important;
   }
-`
+`;
 
 const FindYourStay = () => (
   <Wrapper id="stay_search">
@@ -90,17 +95,20 @@ const FindYourStay = () => (
       </FormElement>
       {/* Check in/out */}
       <FormElement>
-        <IconWrapper style={{flexGrow: '1'}}>
+        <IconWrapper style={{ flexGrow: "1" }}>
           <FontAwesomeIcon icon={faCalendarAlt} />
         </IconWrapper>
-        <input type="text" placeholder="Check-in"  style={{
-          borderRight: '1px solid #F0F0F0'
-        }} />
-        <input type="text" placeholder="Check-out" style={{
-        }}/> 
+        <input
+          type="text"
+          placeholder="Check-in"
+          style={{
+            borderRight: "1px solid #F0F0F0",
+          }}
+        />
+        <input type="text" placeholder="Check-out" style={{}} />
       </FormElement>
       {/* Guest Amount */}
-      <FormElement style={{border: 'none', paddingBottom: '0'}}>
+      <FormElement style={{ border: "none", paddingBottom: "0" }}>
         <IconWrapper>
           <FontAwesomeIcon icon={faUserFriends} />
         </IconWrapper>
@@ -111,6 +119,6 @@ const FindYourStay = () => (
       <FontAwesomeIcon icon={faSearch} />
     </SubmitButton>
   </Wrapper>
-)
+);
 
 export default FindYourStay;

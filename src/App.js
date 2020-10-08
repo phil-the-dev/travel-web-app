@@ -1,8 +1,8 @@
-import React from 'react';
-import './App.css';
-import Layout from './components/Layout';
-import Menu from './components/Menu';
-import LeftSide from './components/LeftSide';
+import React from "react";
+import "./App.css";
+import Layout from "./components/Layout";
+import Menu from "./components/Menu";
+import LeftSide from "./components/LeftSide";
 
 function App() {
   return (

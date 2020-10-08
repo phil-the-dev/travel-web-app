@@ -1,10 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import { faBuilding, faPlaneDeparture, faTrain, faTaxi, faCampground} from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import styled from "styled-components";
+import {
+  faBuilding,
+  faPlaneDeparture,
+  faTrain,
+  faTaxi,
+  faCampground,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const MenuWrapper = styled.nav`
-  background-color: #3E20D9;
+  background-color: #3e20d9;
   color: white;
   width: 160px;
   text-align: left;
@@ -15,7 +21,7 @@ const MenuWrapper = styled.nav`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   .menu-icon {
     padding-top: 50px;
     display: flex;
@@ -28,7 +34,7 @@ const MenuWrapper = styled.nav`
       height: 100%;
     }
   }
-`
+`;
 const Brand = styled.div`
   ::before {
     font-size: 24px;
@@ -39,25 +45,23 @@ const Brand = styled.div`
     font-size: 24px;
     content: "Travel.";
     font-weight: bold;
-   }
-`
+  }
+`;
 const fontawesome_icons = [
   faBuilding,
   faPlaneDeparture,
   faTrain,
   faTaxi,
-  faCampground
-]
+  faCampground,
+];
 
 const Menu = (props) => (
   <MenuWrapper>
-    <Brand/>
-    {fontawesome_icons.map(icon => (
+    <Brand />
+    {fontawesome_icons.map((icon) => (
       <div className="menu-icon">
-        <FontAwesomeIcon
-          icon={icon} />
+        <FontAwesomeIcon icon={icon} />
       </div>
-
     ))}
   </MenuWrapper>
 );
