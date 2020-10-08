@@ -14,8 +14,8 @@ const PopularStays = () => {
 
   return (
     <div>
-      <h2>Popular Stays</h2>
-      <h3>In Krabi Thailand</h3>
+      <h2 style={{fontSize: '30px', marginBottom: '5px', fontWeight: '600' }}>Popular Stays</h2>
+      <h3 style={{fontSize: '16px', marginTop: '5px', fontWeight: 'normal'}}>In Krabi Thailand</h3>
       {stays.map(stay => (<PopularStay {...stay} />))}
     </div>
   )
